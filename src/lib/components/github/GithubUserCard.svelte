@@ -8,7 +8,9 @@
 
     const dispatch = createEventDispatcher();
 
-    const onClick = () => { dispatch('onClick'); }
+    const onClick = () => { dispatch('click', {
+        login: login
+    }); }
 </script>
 
 <div role="button" tabindex="-1" on:keydown={() => {}} on:click={onClick} class="select-none flex flex-row gap-2 p-2 my-2 h-24 bg-gradient-to-br cursor-pointer hover:bg-gradient-to-br hover:from-emerald-500 hover:to-emerald-600 rounded-xl">

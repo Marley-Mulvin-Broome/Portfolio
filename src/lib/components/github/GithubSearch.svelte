@@ -1,10 +1,12 @@
 <script lang="ts">
-	import GithubSearchbar from "./GithubSearchbar.svelte";
-	import GithubStats from "./GithubStats.svelte";
+	import { createEventDispatcher } from "svelte";
+    import GithubSearchbar from "./GithubSearchbar.svelte";
 	import GithubUserCard from "./GithubUserCard.svelte";
 	import Spinner from "./Spinner.svelte";
 
     export let limit: number = 3;
+
+    const dispatch = createEventDispatcher();
 
     let searchTerm = '';
 
@@ -29,6 +31,8 @@
             throw new Error(response.statusText);
         }
     }
+
+    const onClick = (event: any) => { dispatch('userSelected', event.detail); }
 </script>
 
 <div class="rounded mt-2 w-10/12 md:w-2/3 mx-auto lg:w-1/3 p-2 ">
@@ -47,7 +51,7 @@
         {:then results} 
             {#each results.nodes as userNode}
                 {#if Object.keys(userNode).length > 0}
-                    <GithubUserCard login={userNode.login} name={userNode.name} avatarUrl={userNode.avatarUrl} bio={userNode.bio} />
+                    <GithubUserCard on:click={onClick} login={userNode.login} name={userNode.name} avatarUrl={userNode.avatarUrl} bio={userNode.bio} />
                 {/if}
             {/each}
         {:catch error}

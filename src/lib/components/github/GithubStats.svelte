@@ -1,15 +1,10 @@
 <script lang="ts">
-    import { queryParam } from "sveltekit-search-params";
 	import Spinner from "./Spinner.svelte";
 	import GithubSearch from "./GithubSearch.svelte";
 	
     export let canSearch: boolean = true;
-
-    const username = queryParam('username', {
-        encode: (value: string) => value,
-        decode: (value: string | null) => value ?? "torvalds",
-        defaultValue: "Marley-Mulvin-Broome"
-    });
+    
+    let currentUsername = "Marley-Mulvin-Broome";
 
     async function getUserData(username: string | null) {
         username = username ?? "torvalds"
@@ -28,7 +23,12 @@
         }
     }
 
-    let githubPromise = getUserData($username)
+    const onUserSelected = (event: any) => {
+        currentUsername = event.detail.login;
+        githubPromise = getUserData(currentUsername);
+    }
+
+    let githubPromise = getUserData(currentUsername)
 </script>
 
 <div class="w-10/12 md:w-2/3 lg:w-1/3 h-fit mx-auto bg-gradient-to-br rounded-lg p-4 from-emerald-500 to-emerald-700">
@@ -43,7 +43,7 @@
             </div>
             <div class="">
                 <h3 class="text-xl md:text-2xl text-gray-200 font-bold">{user.name}</h3> <!-- Username -->
-                <p class="md:text-base text-gray-300">{$username}</p> <!-- Nickname -->
+                <p class="md:text-base text-gray-300">{currentUsername}</p> <!-- Nickname -->
                 <p>{user.bio ?? ""}</p>
             </div>
         </div>
@@ -51,12 +51,12 @@
         <aside class="grid text-center grid-cols-3 grid-rows-1 mt-4">
             <p class="">{user.followers.totalCount} Followers</p>
             <p>{user.following.totalCount} Following</p>
-            <a class="underline hover:opacity-80 transition-opacity" href="https://github.com/{$username}?tab=repositories" target="_blank" rel="noopener noreferrer">{user.repositories.totalCount} Repositories</a>
+            <a class="underline hover:opacity-80 transition-opacity" href="https://github.com/{currentUsername}?tab=repositories" target="_blank" rel="noopener noreferrer">{user.repositories.totalCount} Repositories</a>
         </aside>
 
         <p class="text-center text-lg font-semibold mt-4">Total Contributions: {user.contributionsCollection.contributionCalendar.totalContributions}</p>
         <div class="grid grid-cols-3 grid-rows-1 mt-2">
-            <button class="text-sm text-center italic underline" aria-label="Reload" on:click|preventDefault={() => {githubPromise = getUserData($username)}}>Reload</button>
+            <button class="text-sm text-center italic underline" aria-label="Reload" on:click|preventDefault={() => {githubPromise = getUserData(currentUsername)}}>Reload</button>
 
         </div>
         
@@ -68,5 +68,5 @@
 </div>
 
 {#if canSearch}
-    <GithubSearch/>
+    <GithubSearch on:userSelected={onUserSelected}/>
 {/if}

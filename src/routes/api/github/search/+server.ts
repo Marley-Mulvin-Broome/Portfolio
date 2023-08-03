@@ -2,7 +2,6 @@ import { searchUsers } from '$lib/components/github/githubDb.js';
 import { json } from '@sveltejs/kit';
 
 export async function GET({ url }) {
-    console.log(url.searchParams);
     const username = url.searchParams.get('searchString') ?? "Search";
     let limit: number = parseInt(url.searchParams.get('limit') as string) ?? 3;
 
