@@ -49,25 +49,6 @@
             ]
         }
     ];
-
-    const timelineEvents: ITimelineEvent[] = [
-        {
-            date: "June 2023",
-            title: "Began work at Ichiriyama Imai Hospital",
-            text: "Started work maintaining the Ichiriyama Imai Hospital's homepage, alongside making improvements and change to the websites content and codebase."
-        },
-        {
-            date: "September 2022",
-            title: "Enrolled at UNSW",
-            text: "Started a bachelor of Science (Computer Science) at UNSW."
-        },
-        {
-            date: "December 2021",
-            title: "Obtained ATAR of 90",
-            text: "Completed the HSC at Cherrybrook Technology High School, obtaining an ATAR of 90. Finishing tied first in both normal and extension Japanese, I also obtained a band 6 in Chinese continuers."
-        },
-    ]
-
 </script>
 
 <div class="flex flex-col items-center justify-center h-screen">
@@ -108,7 +89,7 @@
 <Section>
     <span slot="title">Experience</span>
     <div slot="content">
-        <Timeline events={timelineEvents}/>
+        <Timeline events={data.timelineEvents}/>
     </div>
 </Section>
 

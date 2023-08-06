@@ -15,7 +15,7 @@
     </SectionTitle>
     
     
-    <div class=" w-4/6 mx-auto mt-3 relative overflow-x-auto shadow-md rounded-lg">
+    <div class="w-4/6 mx-auto mt-3 relative overflow-x-auto shadow-md rounded-lg">
         <ProjectsTable projects={data.projects} />
 
     </div>
