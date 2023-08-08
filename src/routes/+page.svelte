@@ -8,9 +8,8 @@
     import Title from "$lib/components/Title.svelte";
 	import GithubStats from "$lib/components/github/GithubStats.svelte";
     import type { IListItem } from "$lib/types/listItem";
-	import type { ITimelineEvent } from "$lib/types/timelineEvent";
-	import { fade } from "svelte/transition";
-    import type { PageData } from "./$types";
+    import type { PageData, ActionData } from "./$types";
+	import Contact from "$lib/components/Contact.svelte";
 
     export let data: PageData;
 
@@ -49,6 +48,8 @@
             ]
         }
     ];
+
+    export let form: ActionData;
 </script>
 
 <div class="flex flex-col items-center justify-center h-screen">
@@ -80,12 +81,14 @@
         <GithubStats/>
     </div>
 </Section>
+
 <Section>
     <span slot="title">Skills</span>
     <div slot="content">
         <SkillList skills={data.skills}/>
     </div>
 </Section>
+
 <Section>
     <span slot="title">Experience</span>
     <div slot="content">
@@ -93,3 +96,9 @@
     </div>
 </Section>
 
+<Section>
+    <span slot="title">Contact</span>
+    <div slot="content">
+        <Contact {form} />
+    </div>
+</Section>

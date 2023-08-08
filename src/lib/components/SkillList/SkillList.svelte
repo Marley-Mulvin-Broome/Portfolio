@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SkillCategory, type Skill } from "$lib/types/skill";
-	import Tag from "../Tag.svelte";
+	import SkillDisplay from "./SkillDisplay.svelte";
 	import SkillListItem from "./SkillListItem.svelte";
 	import SkillToggleButton from "./SkillToggleButton.svelte";
 
@@ -8,7 +8,7 @@
     export let Categories: SkillCategory[] = [];
     export let possibleCategories: SkillCategory[] = Object.values(SkillCategory);
 
-    $: categoryString = Categories.length > 0 ? Categories.join(", ") : "All";
+    $: categoryString = Categories.length > 0 ? Categories.join(", ") : "All Skills";
 
     let selectedSkill: Skill | null = skills.length > 0 ? skills[0] : null;
 
@@ -47,33 +47,28 @@
 </script>
 
 
-<div class="grid grid-cols-3 mt-20 gap-4">
+<div class="grid md:grid-cols-3 grid-row-1 md:mt-20 mt-2 gap-4">
     <div class="col-span-1">
-        <h3 class="text-2xl text-center text-emerald-400">Categories</h3>
-        <p class="text-center text-neutral-300">Click a category to filter</p>
-        <div class="mt-2 flex flex-wrap gap-2">
-            {#each possibleCategories as category}
-                <SkillToggleButton on:click={() => toggleCategory(category)}>{category}</SkillToggleButton>
-            {/each}
+        <div class="lg:block hidden" >
+            <h3 class="text-2xl text-center text-emerald-400">Categories</h3>
+            <p class="text-center text-neutral-300">Click a category to filter</p>
+            <div class="mt-2 flex flex-wrap gap-2">
+                {#each possibleCategories as category}
+                    <SkillToggleButton on:click={() => toggleCategory(category)}>{category}</SkillToggleButton>
+                {/each}
+            </div>
         </div>
-        <div class="mt-2">
+        
+        <div class="mt-2 md:mx-0 lg:text-left text-center">
             {#if selectedSkill}
-                <img loading="lazy" decoding="async" class="mb-1 mx-auto" src="skills/{selectedSkill.icon}" alt="{selectedSkill.name}" width="100" height="100"/>
-                <h3 class="text-center text-xl align-middle">{selectedSkill.name}</h3>
-                
-                <p>{selectedSkill.description}</p>
-                <div class="flex flex-row flex-wrap mt-2">
-                    {#each selectedSkill.categories as category}
-                        <Tag>{category}</Tag>
-                    {/each}
-                    <Tag>{selectedSkill.experience} year(s) of experience</Tag>
-                </div>
+                <SkillDisplay skill={selectedSkill} />
             {/if}
         </div>
     </div>
 
     <div class="col-span-2">
         <h3 class="text-2xl text-center text-emerald-400">{categoryString}</h3>
+        <p class="text-center text-neutral-300">Click a skill to view more details</p>
         <div class="grid grid-cols-4 mt-7" >
             {#each getSkillsWithCategories(Categories) as skill}
                 <SkillListItem on:click={() => { selectedSkill = skill; }} skill={skill} />
