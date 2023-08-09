@@ -98,7 +98,7 @@
 
 <Section>
     <span slot="title">Contact</span>
-    <div slot="content">
+    <div class="pt-4" slot="content">
         <Contact {form} />
     </div>
 </Section>

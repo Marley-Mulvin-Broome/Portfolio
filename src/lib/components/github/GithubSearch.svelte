@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from "svelte";
     import GithubSearchbar from "./GithubSearchbar.svelte";
 	import GithubUserCard from "./GithubUserCard.svelte";
-	import Spinner from "./Spinner.svelte";
+	import Spinner from "../Spinner.svelte";
 
     export let limit: number = 3;
 

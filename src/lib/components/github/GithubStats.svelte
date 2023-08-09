@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Spinner from "./Spinner.svelte";
+	import Spinner from "../Spinner.svelte";
 	import GithubSearch from "./GithubSearch.svelte";
 	
     export let canSearch: boolean = true;

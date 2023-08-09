@@ -1,14 +1,14 @@
 import { sendEmail } from "$lib/emailer";
 import { fail, type Actions } from "@sveltejs/kit"
 
+const sleep = async (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export const actions = {
     default: async ({request}) => { 
         const data = await request.formData();
         const name = data.get('nameInput') as string;
-        const email = data.get('nameInput') as string;
+        const email = data.get('emailInput') as string;
         const message = data.get('messageInput') as string;
-
-        console.log(name, email, message)
 
         if (!name) {
             return fail(400, { name, missing: true});
@@ -24,8 +24,8 @@ export const actions = {
 
         const response = await sendEmail(name, email, message);
 
-        if (response.rejected) {
-            return fail(500, { success: false });
+        if (response.rejected.length > 0) {
+            return fail(400, { success: false });
         }
 
         return {
