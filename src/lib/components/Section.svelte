@@ -4,7 +4,7 @@
     export let classes: string = "";
 </script>
 
-<div class="flex flex-col items-center min-h-fit xl:h-screen h-fit md:mt-0 mt-56 {classes}">
+<div class="flex flex-col items-center min-h-screen md:mt-0 mt-56 {classes}">
     <SectionTitle>
         <slot name="title"/>
     </SectionTitle> 

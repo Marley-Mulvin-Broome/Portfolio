@@ -47,8 +47,8 @@
 </script>
 
 
-<div class="grid md:grid-cols-3 grid-row-1 md:mt-20 mt-2 gap-4">
-    <div class="col-span-1">
+<div class="grid xl:grid-cols-3 grid-row-1 xl:mt-20 mt-2 gap-4">
+    <div class="xl:col-span-1 xl:order-1 order-2">
         <div class="lg:block hidden" >
             <h3 class="text-2xl text-center text-emerald-400">Categories</h3>
             <p class="text-center text-neutral-300">Click a category to filter</p>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="col-span-2">
-        <h3 class="text-2xl text-center text-emerald-400">{categoryString}</h3>
+        <h3 class="text-2xl text-center text-emerald-400 xl:block hidden">{categoryString}</h3>
         <p class="text-center text-neutral-300">Click a skill to view more details</p>
         <div class="grid grid-cols-4 mt-7" >
             {#each getSkillsWithCategories(Categories) as skill}
