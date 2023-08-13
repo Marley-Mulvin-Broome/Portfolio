@@ -137,7 +137,7 @@ export const skills: Skill[] = [
     },
     {
         name: "React",
-        description: "React - Employed in personal projects to develop small-scale applications, demonstrating a solid proficiency in its fundamentals. While React is utilized effectively, a preference for other frontend technologies like Svelte is apparent, stemming from an affinity for its streamlined development approach. Adapts React's component-based architecture to create interactive user interfaces and engaging experiences, while also exploring alternative technologies to achieve optimal frontend outcomes.",
+        description: "Employed in personal projects to develop small-scale applications, demonstrating a solid proficiency in its fundamentals. While React is utilized effectively, a preference for other frontend technologies like Svelte is apparent, stemming from an affinity for its streamlined development approach. Adapts React's component-based architecture to create interactive user interfaces and engaging experiences, while also exploring alternative technologies to achieve optimal frontend outcomes.",
         experience: 1,
         icon: "react.svg",
         categories: [SkillCategory.Frontend, SkillCategory.WebDevelopment]
