@@ -3,4 +3,5 @@ export interface Project {
     date: Date;
     description: string;
     link?: string;
+    source?: string;
 }
