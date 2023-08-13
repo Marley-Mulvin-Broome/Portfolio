@@ -29,11 +29,11 @@
         }} {action}>
             <div class="mb-4">
                 <label class="block text-lg" for="nameInput">Your Name</label>
-                <input bind:value={name} class="bg-transparent border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="text" name="nameInput" id="nameInput" placeholder="Bob @ Nintendo"/>
+                <input bind:value={name} class="bg-transparent border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="text" name="nameInput" id="nameInput" placeholder="Marley Mulvin Broome @ Freelight Software"/>
             </div>
             <div class="mb-4">
                 <label class="block text-lg" for="emailInput">Your Email</label>
-                <input bind:value={email} class="bg-transparent border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="email" name="emailInput" id="emailInput" placeholder="Email"/>    
+                <input bind:value={email} class="bg-transparent border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="email" name="emailInput" id="emailInput" placeholder="marley.developer@gmail.com"/>    
             </div>
             <div class="mb-4">
                 <label class="block text-lg" for="messageInput">Your Message</label>
