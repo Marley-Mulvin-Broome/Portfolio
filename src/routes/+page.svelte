@@ -10,6 +10,7 @@
     import type { IListItem } from "$lib/types/listItem";
     import type { PageData, ActionData } from "./$types";
 	import Contact from "$lib/components/Contact.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 
     export let data: PageData;
 
@@ -52,6 +53,10 @@
     export let form: ActionData;
 </script>
 
+<svelte:head>
+    <title>Marley Mulvin Broome</title>
+</svelte:head>
+
 <div class="flex flex-col items-center justify-center h-screen">
     <div>
         <Title>
@@ -70,7 +75,6 @@
         <List items={projectItems} />
         <div class="my-5">
             <LinkButton externalLink={false} href="/projects">See more...</LinkButton>
-            <!-- <LinkButton href="https://github.com/Marley-Mulvin-Broome?tab=repositories&q=&type=public&language=&sort=stargazers">See more...</LinkButton> -->
         </div>
     </div>
 </Section>
@@ -102,3 +106,5 @@
         <Contact {form} />
     </div>
 </Section>
+
+<Footer socialLinks={data.socialLinks} />

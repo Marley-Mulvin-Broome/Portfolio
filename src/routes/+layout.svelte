@@ -12,7 +12,7 @@
     <meta name="author" content="Marley Mulvin Broome, marley.developer@gmail.com">
     <meta name="language" content="en">
     <meta name="robots" content="index,follow">
-    <meta name="revised" content="Wednesday, August 2nd, 2023, 6:51 pm">
+    <meta name="revised" content="Sunday, August 13th, 2023, 17:20 pm">
     
     <meta name="og:title" content="Marley Mulvin Broome">
     <meta name="og:description" content="Marley Mulvin Broome's personal portfolio.">

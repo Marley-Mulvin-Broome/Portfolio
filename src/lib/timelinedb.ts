@@ -2,6 +2,7 @@ import type { ITimelineEvent } from "./types/timelineEvent";
 
 function stringToDate(stringDate: string): Date {
     const [month, year] = stringDate.split(" ");
+    // Add the 1 there for the day of month, otherwise won't parse
     return new Date(`${month} 1, ${year}`);
     
 }
@@ -22,6 +23,11 @@ export const timelineEvents: ITimelineEvent[] = [
         title: "Obtained ATAR of 90",
         text: "Completed the HSC at Cherrybrook Technology High School, obtaining an ATAR of 90. Finishing tied first in both normal and extension Japanese, I also obtained a band 6 in Chinese continuers."
     },
+    {
+        date: "March 2022",
+        title: "Started Educator role at the Powerhouse Museum",
+        text: "Teaching IT skills to students of various backgrounds, including those with learning disabilities such as autism and ADD. Utilised my programming knowledge to help teach various technologies such as Python, C#, and Unity."
+    }
 ].sort((a, b) => {
     // Make sure to sort by date
     return stringToDate(b.date).getTime() - stringToDate(a.date).getTime();

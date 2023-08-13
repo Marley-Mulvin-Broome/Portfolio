@@ -7,6 +7,10 @@
     export let data: PageData;
 </script>
 
+<svelte:head>
+    <title>My Projects</title>
+</svelte:head>
+
 <Backbutton target="/#projects" />
 
 <div class="text-center mt-5">
