@@ -24,8 +24,8 @@ export const skills: Skill[] = [
     },
     {
         name: "Unity",
-        description: "",
-        experience: 1,
+        description: "Proficient in utilizing C# to craft engaging games, leveraging Object-Oriented Programming principles and adeptly applying design patterns to ensure efficient and scalable code. Demonstrates expertise in developing intricate systems within Unity, showcasing the ability to create expansive, functional environments.",
+        experience: 2,
         icon: "unity.svg",
         categories: [SkillCategory.GameEngine, SkillCategory.Tool],
         imgStyling: "fill-white"
@@ -53,28 +53,28 @@ export const skills: Skill[] = [
     },
     {
         name: "SvelteKit",
-        description: "",
+        description: "The cornerstone of this portfolio and a go-to choice for numerous personal projects, SvelteKit stands out as a favorite web technology. Proficiently harness its power to swiftly create captivating user experiences, demonstrating a deep understanding of its capabilities and maximizing productivity through its intuitive development approach.",
         experience: 1,
         icon: "svelte.svg",
         categories: [SkillCategory.WebDevelopment, SkillCategory.Frontend, SkillCategory.FullStack, SkillCategory.Backend]
     },
     {
         name: "ExpressJS",
-        description: "",
+        description: "Applied ExpressJS to collaboratively construct a dynamic forum application as part of a university group project. Skilled in crafting versatile and efficient backend systems, particularly adept at developing medium-sized backends that seamlessly manage data flow and user interactions.",
         experience: 1,
         icon: "express.svg",
         categories: [SkillCategory.WebDevelopment, SkillCategory.Backend]
     },
     {
         name: "Supabase",
-        description: "",
+        description: "The preferred database solution, seamlessly interfacing with Prisma for streamlined data management. Eliminating the need for a dedicated server, Supabase accelerates development while maintaining a focus on data integrity. Adeptly navigates its features to create efficient and robust database structures, contributing to a smooth and gratifying development experience.",
         experience: 1,
         icon: "supabase.svg",
         categories: [SkillCategory.Database, SkillCategory.Backend]
     },
     {
         name: "JetBrains IDEs",
-        description: "",
+        description: "Highly skilled in efficiently navigating PyCharm, Rider, and similar software, effectively managing professional-level projects like JSpeak and Plantopia. Capitalizes on the robust features of these IDEs to enhance coding speed, code quality, and project organization. Adeptly integrates various tools and plugins, showcasing a comprehensive understanding of the JetBrains ecosystem for seamless project development and management.",
         experience: 1,
         icon: "jetbrains.svg",
         categories: [SkillCategory.IDE, SkillCategory.Tool]
@@ -95,8 +95,8 @@ export const skills: Skill[] = [
     },
     {
         name: "Git",
-        description: "",
-        experience: 1,
+        description: "A proficient user who expertly employs its version control capabilities to manage a diverse array of personal, work, and university projects. Implements best practices including branch management with master, staging, and dev branches, as well as employing tagging and descriptive commits to maintain a comprehensive project history. Demonstrates a deep understanding of Git's intricacies, ensuring efficient collaboration and organized project development across various contexts.",
+        experience: 5,
         icon: "git.svg",
         categories: [SkillCategory.VersionControl, SkillCategory.Tool]
     },
@@ -109,7 +109,7 @@ export const skills: Skill[] = [
     },
     {
         name: "GitLab",
-        description: "",
+        description: "Integral to university projects at UNSW, GitLab serves as a crucial platform for version control and collaborative development. Leverages its functionalities, akin to GitHub, to implement robust continuous integration practices that enhance code quality and streamline development workflows. Proficiently integrates automated testing and deployment pipelines, showcasing a strong grasp of GitLab's capabilities for optimizing project development within an academic setting.",
         experience: 1,
         icon: "gitlab.svg",
         categories: [SkillCategory.VersionControl, SkillCategory.Tool]
@@ -123,21 +123,21 @@ export const skills: Skill[] = [
     },
     {
         name: "Linux",
-        description: "",
+        description: "A daily driver as the preferred operating system, showcasing adeptness in seamlessly navigating popular distributions like Debian and Ubuntu. Proficiently integrates command-line prowess, leveraging strong bash skills to efficiently manage tasks, automate processes, and streamline development workflows. Demonstrates a comprehensive understanding of Linux's architecture and tools, contributing to a smooth and productive computing experience across various tasks and environments.",
         experience: 1,
         icon: "linux.svg",
         categories: [SkillCategory.Linux]
     },
     {
         name: "GraphQL",
-        description: "",
+        description: "Leveraged within this portfolio to interact seamlessly with the GitHub API, showcasing its versatility and efficiency as an alternative to traditional REST APIs. Recognizes the substantial benefits of GraphQL, including a superior developer experience and simplified data retrieval through its tailored queries. Proficiently crafts GraphQL queries and mutations, harnessing its ease of use to swiftly fetch and manipulate data, contributing to an enhanced user experience and streamlined backend interactions.",
         experience: 1,
         icon: "graphql.svg",
         categories: [SkillCategory.Database, SkillCategory.WebDevelopment]
     },
     {
         name: "React",
-        description: "",
+        description: "React - Employed in personal projects to develop small-scale applications, demonstrating a solid proficiency in its fundamentals. While React is utilized effectively, a preference for other frontend technologies like Svelte is apparent, stemming from an affinity for its streamlined development approach. Adapts React's component-based architecture to create interactive user interfaces and engaging experiences, while also exploring alternative technologies to achieve optimal frontend outcomes.",
         experience: 1,
         icon: "react.svg",
         categories: [SkillCategory.Frontend, SkillCategory.WebDevelopment]
@@ -151,7 +151,7 @@ export const skills: Skill[] = [
     },
     {
         name: "Vercel",
-        description: "",
+        description: "The preferred hosting platform for personal projects due to its generous free tier and seamless deployment integration with GitHub Actions. Utilizes Vercel's efficient deployment process to swiftly bring projects to the web, capitalizing on its user-friendly interface and streamlined workflow. Adeptly leverages its features to ensure optimal performance and availability, contributing to a satisfying end-user experience and allowing projects to shine on the online stage.",
         experience: 1,
         icon: "vercel.svg",
         categories: [SkillCategory.DevOps, SkillCategory.WebDevelopment]
@@ -165,28 +165,28 @@ export const skills: Skill[] = [
     },
     {
         name: "Sass",
-        description: "",
+        description: "Utilized in previous personal projects to significantly enhance style development efficiency. Proficiently wields Sass to expedite style writing, effectively doubling the speed compared to conventional CSS. Leverages its advanced features such as variables, mixins, and nesting to create maintainable and organized stylesheets, resulting in visually appealing and cohesive designs that are quickly brought to fruition.",
         experience: 1,
         icon: "sass.svg",
         categories: [SkillCategory.Frontend, SkillCategory.WebDevelopment]
     },
     {
         name: "TailwindCSS",
-        description: "",
+        description: "Employed to craft the aesthetics of this portfolio, Tailwind CSS stands out as a choice tool for rapid development with visually appealing styles. Embraces its utility-first approach to efficiently create attractive interfaces, particularly favored for personal projects and applications of moderate scope. Demonstrates a keen understanding of Tailwind's class-based styling system, leveraging its pre-designed components and customization options to swiftly create captivating designs that enhance both aesthetics and development speed.",
         experience: 1,
         icon: "tailwindcss.svg",
         categories: [SkillCategory.Frontend, SkillCategory.WebDevelopment]
     },
     {
         name: "Vim",
-        description: "",
+        description: "Skillfully navigates Vim as an occasional editor in daily activities, particularly beneficial for SSH development scenarios where only a command-line interface is accessible. Demonstrates adeptness in efficiently editing code and text within Vim's modal interface, capitalizing on its lightweight nature and availability on various environments. Utilizes its keybindings and features to navigate, manipulate, and modify text swiftly, contributing to a productive coding experience even in constrained settings.",
         experience: 1,
         icon: "vim.svg",
         categories: [SkillCategory.Tool]
     },
     {
         name: "Jest",
-        description: "",
+        description: "Introduced through a university group project, Jest has since become a favored JavaScript testing library. Proficiently navigates its testing ecosystem, leveraging its comprehensive features to create robust test suites. Recognizes its value in ensuring code quality and maintaining project stability, showcasing an in-depth understanding of Jest's capabilities and a knack for crafting effective test cases that contribute to a smooth development process.",
         experience: 1,
         icon: "jest.svg",
         categories: [SkillCategory.Testing, SkillCategory.WebDevelopment]
@@ -200,21 +200,21 @@ export const skills: Skill[] = [
     },
     {
         name: "Make",
-        description: "",
+        description: "The go-to build tool for all C projects, prominently employed during university studies. Proficiently harnesses Make's capabilities to construct intricate build files that streamline the compilation and linking process. Demonstrates a strong command of Make's syntax and features, effectively managing dependencies and optimizing project compilation. Adeptly navigates its complexities to ensure efficient code building, reflecting a thorough understanding of build automation and project management within the C ecosystem.",
         experience: 1,
         icon: "cmake.svg",
         categories: [SkillCategory.Tool]
     },
     {
         name: "HTML5",
-        description: "",
+        description: "Possesses a comprehensive understanding of semantic HTML, skillfully implementing tags to enhance both the structure of web content and its accessibility. Demonstrates proficiency in utilizing HTML5 elements to accurately represent the purpose and hierarchy of page elements, contributing to improved search engine optimization and user experience. Prioritizes the integration of ARIA attributes to ensure compatibility with assistive technologies, showcasing a commitment to creating web content that is inclusive and user-friendly.",
         experience: 1,
         icon: "html5.svg",
         categories: [SkillCategory.WebDevelopment, SkillCategory.Frontend]
     },
     {
         name: "Pytest",
-        description: "",
+        description: "Proficiently employs Pytest as the testing framework of choice for all Python projects, both personal and professional. Leverages its features to create comprehensive and effective test suites, ensuring code reliability and maintainability. Demonstrates a deep understanding of Pytest's capabilities, efficiently crafting test cases, fixtures, and assertions to thoroughly validate Python code. Embraces its flexible and intuitive syntax to foster a robust testing culture, contributing to the development of high-quality and dependable Python applications.",
         experience: 1,
         icon: "pytest.svg",
         categories: [SkillCategory.Testing]
