@@ -11,7 +11,12 @@
         {#if project.link}
             <a class="underline text-emerald-500" target="_blank" rel="noopener noreferrer" href={project.link}>{project.name}</a>
         {:else}
-            {project.name}
+            <p class="inline-block">
+                {project.name}
+            </p>
+        {/if}
+        {#if project.source}
+            <a class="inline-block" target="_blank" rel="noopener noreferrer" href={project.source}><img class="inline-block" src="skills/github.svg" width="25" height="25" alt="Source code on Github"/></a>
         {/if}
     </th>
     <td class="{padding}">{project.date.toISOString().split('T')[0]}</td>
