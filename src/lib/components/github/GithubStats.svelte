@@ -38,13 +38,13 @@
         </div>
     {:then user} 
         <div class="flex gap-4">
-            <div class="justify-self-center">
-                <img class="rounded-full" alt="{user.name} github profile" width="130" height="130" src={user.avatarUrl}/>
+            <div class="min-w-fit justify-self-center">
+                <img class="rounded-full self-center" alt="{user.name} github profile" width="130" height="130" src={user.avatarUrl}/>
             </div>
             <div class="">
-                <h3 class="text-xl md:text-2xl text-gray-200 font-bold">{user.name}</h3> <!-- Username -->
+                <h3 class="text-xl md:text-2xl text-gray-200 font-bold">{user.name ?? "No name"}</h3> <!-- Username -->
                 <p class="md:text-base text-gray-300">{currentUsername}</p> <!-- Nickname -->
-                <p>{user.bio ?? ""}</p>
+                <p class="text-ellipsis">{user.bio ?? ""}</p>
             </div>
         </div>
 
@@ -56,8 +56,9 @@
 
         <p class="text-center text-lg font-semibold mt-4">Total Contributions: {user.contributionsCollection.contributionCalendar.totalContributions}</p>
         <div class="grid grid-cols-3 grid-rows-1 mt-2">
-            <button class="text-sm text-center italic underline" aria-label="Reload" on:click|preventDefault={() => {githubPromise = getUserData(currentUsername)}}>Reload</button>
+            <button class="text-center underline" aria-label="Reload" on:click|preventDefault={() => {githubPromise = getUserData(currentUsername)}}>Reload</button>
 
+            <a href="https://github.com/{currentUsername}" class="col-start-3 text-center underline" target="_blank" rel="noopener noreferrer">Follow</a>
         </div>
         
     

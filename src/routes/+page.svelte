@@ -12,7 +12,6 @@
 	import Contact from "$lib/components/Contact.svelte";
     import Footer from "$lib/components/Footer.svelte";
 	import ScrollProgressTracker from "$lib/components/ScrollProgressTracker.svelte";
-	import { error } from "@sveltejs/kit";
 
     export let data: PageData;
 
@@ -86,7 +85,7 @@
 
 <Section>
     <span class="flex flex-row gap-2" slot="title">Stats <img class="lg:w-10 lg:h-10 w-8 h-8 my-auto lg:mt-5" src="github-mark-white.svg" alt="Github">  </span>
-    <div slot="content">
+    <div class="p-4" slot="content">
         <GithubStats/>
     </div>
 </Section>
