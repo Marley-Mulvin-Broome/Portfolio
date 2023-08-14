@@ -13,6 +13,7 @@
     <meta name="language" content="en">
     <meta name="robots" content="index,follow">
     <meta name="revised" content="Sunday, August 13th, 2023, 17:20 pm">
+    <meta charset="utf-8">
     
     <meta name="og:title" content="Web Developer Marley Mulvin Broome's Profile">
     <meta name="og:description" content="Marley Mulvin Broome is a web developer and current student at the University of New South Wales. Fluent in both Japanese and English.">
