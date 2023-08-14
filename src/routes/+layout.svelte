@@ -7,15 +7,15 @@
 
 <svelte:head>
     <title>Marley Mulvin Broome</title>
-    <meta name="description" content="Marley Mulvin Broome's personal portfolio.">
-    <meta name="keywords" content="marley, mulvin, broome, web, web developer, programmer, hire web, hire developer, website creation, app, dev, hire dev, junior">
+    <meta name="description" content="Marley Mulvin Broome is a web developer and current student at the University of New South Wales, Sydney, Australia. Fluent in Japanese and English, Marley creates web and software services efficiently and effectively.">
+    <meta name="keywords" content="marley, mulvin, broome, web, web developer, programmer, hire web, hire developer, website creation, app, dev, github, github stats, hire dev, junior">
     <meta name="author" content="Marley Mulvin Broome, marley.developer@gmail.com">
     <meta name="language" content="en">
     <meta name="robots" content="index,follow">
     <meta name="revised" content="Sunday, August 13th, 2023, 17:20 pm">
     
-    <meta name="og:title" content="Marley Mulvin Broome">
-    <meta name="og:description" content="Marley Mulvin Broome's personal portfolio.">
+    <meta name="og:title" content="Web Developer Marley Mulvin Broome's Profile">
+    <meta name="og:description" content="Marley Mulvin Broome is a web developer and current student at the University of New South Wales, Sydney, Australia. Fluent in Japanese and English, Marley creates web and software services efficiently and effectively.">
     <meta name="og:image" content="https://avatars.githubusercontent.com/u/20318132?v=4">
     <meta name="og:email" content="marley.developer@gmail.com">
 </svelte:head>

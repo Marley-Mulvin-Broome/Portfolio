@@ -2,6 +2,6 @@
     export let id: string = "";
 </script>
 
-<h1 {id} class="lg:text-7xl text-3xl font-bold text-emerald-500">
+<h2 {id} class="lg:text-7xl text-3xl font-bold text-emerald-500">
     <slot />
-</h1>
+</h2>
