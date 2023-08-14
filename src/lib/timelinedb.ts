@@ -21,7 +21,7 @@ export const timelineEvents: ITimelineEvent[] = [
     {
         date: "December 2021",
         title: "Obtained ATAR of 90",
-        text: "Completed the HSC at Cherrybrook Technology High School, obtaining an ATAR of 90. Finishing tied first in both normal and extension Japanese, I also obtained a band 6 in Chinese continuers."
+        text: "Completed the HSC at Cherrybrook Technology High School, obtaining an ATAR of 90."
     },
     {
         date: "March 2022",

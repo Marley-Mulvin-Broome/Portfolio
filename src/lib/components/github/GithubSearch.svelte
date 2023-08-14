@@ -4,8 +4,6 @@
 	import GithubUserCard from "./GithubUserCard.svelte";
 	import Spinner from "../Spinner.svelte";
 
-    export let limit: number = 3;
-
     const dispatch = createEventDispatcher();
 
     let searchTerm = '';

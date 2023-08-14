@@ -8,9 +8,11 @@
     import Title from "$lib/components/Title.svelte";
 	import GithubStats from "$lib/components/github/GithubStats.svelte";
     import type { IListItem } from "$lib/types/listItem";
-    import type { PageData, ActionData } from "./$types";
+    import type { PageData } from "./$types";
 	import Contact from "$lib/components/Contact.svelte";
     import Footer from "$lib/components/Footer.svelte";
+	import ScrollProgressTracker from "$lib/components/ScrollProgressTracker.svelte";
+	import { error } from "@sveltejs/kit";
 
     export let data: PageData;
 
@@ -49,13 +51,13 @@
             ]
         }
     ];
-
-    export let form: ActionData;
 </script>
 
 <svelte:head>
     <title>Marley Mulvin Broome</title>
 </svelte:head>
+
+<ScrollProgressTracker />
 
 <div class="flex flex-col items-center justify-center h-screen">
     <div>
@@ -86,7 +88,7 @@
     </div>
 </Section>
 
-<Section>
+<Section classes="mb-80">
     <span slot="title">Skills</span>
     <div slot="content">
         <SkillList skills={data.skills}/>
@@ -103,7 +105,7 @@
 <Section>
     <span slot="title">Contact</span>
     <div class="pt-4" slot="content">
-        <Contact {form} />
+        <Contact />
     </div>
 </Section>
 

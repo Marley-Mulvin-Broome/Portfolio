@@ -37,4 +37,4 @@
     }
 </script>
 
-<th scope="col" class="font-medium px-6 py-3 cursor-pointer select-none" on:click={onClick}><slot/>{#if sortingKey === key} {getDirection(direction)} {/if}</th>
+<th scope="col" class="font-medium px-6 py-3 select-none" class:cursor-pointer={sortable} on:click={onClick}><slot/>{#if sortingKey === key} {getDirection(direction)} {/if}</th>
