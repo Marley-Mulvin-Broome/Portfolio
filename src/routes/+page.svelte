@@ -21,6 +21,7 @@
             name: "JSpeak",
             description: "An anki addon that generates TTS audio on the fly.",
             video: "JSpeak.webm",
+            image: "JSpeak.png",
             tags: [
                 "Python",
                 "Anki",
@@ -33,6 +34,7 @@
             name: "Plantopia",
             description: "A game where you manage a farm.",
             video: "plantopia.webm",
+            image: "Plantopia.png",
             tags: [
                 "Unity",
                 "C#",
@@ -43,6 +45,7 @@
             name: "Electron Timer",
             description: "A capable timer app built with Electron.",
             video: "electrontimer.webm",
+            image: "electrontimer.png",
             tags: [
                 "Electron",
                 "JavaScript",
