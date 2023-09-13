@@ -1,15 +1,15 @@
-import { graphql, GraphqlResponseError, type GraphQlQueryResponseData } from "@octokit/graphql";
+import { graphql, GraphqlResponseError, type GraphQlQueryResponseData } from '@octokit/graphql';
 
-import { GITHUB_TOKEN } from "$env/static/private";
+import { GITHUB_TOKEN } from '$env/static/private';
 
 const graphqlWithAuth = graphql.defaults({
-    headers: {
-        authorization: `token ${GITHUB_TOKEN}`,
-    },
+	headers: {
+		authorization: `token ${GITHUB_TOKEN}`
+	}
 });
 
 export const getUserDetails = async (username: string) => {
-    const query = `
+	const query = `
         query($username: String!) {
             user(login: $username) {
                 name
@@ -35,26 +35,26 @@ export const getUserDetails = async (username: string) => {
         }
     `;
 
-    try {
-        const response: GraphQlQueryResponseData = await graphqlWithAuth(query, {
-            username,
-        });
+	try {
+		const response: GraphQlQueryResponseData = await graphqlWithAuth(query, {
+			username
+		});
 
-        return response.user;
-    } catch(error) {
-        if (error instanceof GraphqlResponseError) {
-            console.log("Request failed:", error.request);
-            console.log(error.message);
-        } else {
-            console.log(error);
-        }
-    }
-    
-    return null;
-}
+		return response.user;
+	} catch (error) {
+		if (error instanceof GraphqlResponseError) {
+			console.log('Request failed:', error.request);
+			console.log(error.message);
+		} else {
+			console.log(error);
+		}
+	}
 
-export const searchUsers = async (queryString: string, limit: number = 3) =>  {
-    const query = `
+	return null;
+};
+
+export const searchUsers = async (queryString: string, limit = 3) => {
+	const query = `
         query($name: String!, $limit: Int!) { 
             search(query: $name, type: USER, first:$limit) {
                 userCount
@@ -70,20 +70,21 @@ export const searchUsers = async (queryString: string, limit: number = 3) =>  {
         }
     `;
 
-    try {
-        const response: GraphQlQueryResponseData = await graphqlWithAuth(query, {
-            name: queryString, limit
-        });
+	try {
+		const response: GraphQlQueryResponseData = await graphqlWithAuth(query, {
+			name: queryString,
+			limit
+		});
 
-        return response.search;
-    } catch(error) {
-        if (error instanceof GraphqlResponseError) {
-            console.log("Request failed:", error.request);
-            console.log(error.message);
-        } else {
-            console.log(error);
-        }
-    }
-    
-    return null;
-}
+		return response.search;
+	} catch (error) {
+		if (error instanceof GraphqlResponseError) {
+			console.log('Request failed:', error.request);
+			console.log(error.message);
+		} else {
+			console.log(error);
+		}
+	}
+
+	return null;
+};

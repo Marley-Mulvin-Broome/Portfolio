@@ -1,8 +1,8 @@
-import type { PageLoad } from "./$types";
-import { projects } from "$lib/projectsdb";
+import type { PageLoad } from './$types';
+import { projects } from '$lib/projectsdb';
 
 export const load = (() => {
-    return {
-        projects 
-    };
+	return {
+		projects
+	};
 }) satisfies PageLoad;

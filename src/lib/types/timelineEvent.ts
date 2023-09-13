@@ -1,5 +1,5 @@
 export interface ITimelineEvent {
-    date: string,
-    title: string,
-    text: string
+	date: string;
+	title: string;
+	text: string;
 }
