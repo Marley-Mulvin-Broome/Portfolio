@@ -9,8 +9,8 @@
 
     let formStatus: FormStatus = FormStatus.Idle;
 
-    let name: string = "";
-    let email: string = "";
+    let name = "";
+    let email = "";
 
     let errorBody = "";
 
@@ -42,7 +42,7 @@
         }} {action}>
             <div class="mb-4">
                 <label class="block text-lg" for="nameInput">Your Name</label>
-                <input bind:value={name} class="bg-transparent border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="text" name="nameInput" id="nameInput" placeholder="Marley Mulvin Broome @ Freelight Software"/>
+                <input bind:value={name} class="bg-transparent border-0 active:!outline-none focus:active:!outline-none border-b-2 border-emerald-700 block w-full focus:border-emerald-500 focus:outline-none" required type="text" name="nameInput" id="nameInput" placeholder="Marley Mulvin Broome @ Freelight Software"/>
             </div>
             <div class="mb-4">
                 <label class="block text-lg" for="emailInput">Your Email</label>

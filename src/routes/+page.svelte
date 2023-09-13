@@ -105,6 +105,13 @@
 </Section>
 
 <Section>
+    <a slot="title" href="/blog">Blog</a>
+    <div slot="content">
+        
+    </div>
+</Section>
+
+<Section>
     <span slot="title">Contact</span>
     <div class="pt-4" slot="content">
         <Contact />
