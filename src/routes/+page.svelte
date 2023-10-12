@@ -12,8 +12,11 @@
 	import Contact from "$lib/components/Contact.svelte";
     import Footer from "$lib/components/Footer.svelte";
 	import ScrollProgressTracker from "$lib/components/ScrollProgressTracker.svelte";
+	import BottomModal from "$lib/components/BottomModal.svelte";
 
     export let data: PageData;
+
+    let scrollY = 0;
 
     const projectItems: IListItem[] = [
         {
@@ -53,13 +56,21 @@
             ]
         }
     ];
+
 </script>
 
 <svelte:head>
     <title>Marley Mulvin Broome</title>
 </svelte:head>
 
+<svelte:window bind:scrollY />
+
 <ScrollProgressTracker />
+
+
+
+
+
 
 <div class="flex flex-col items-center justify-center h-screen">
     <div>
@@ -68,8 +79,9 @@
             <span slot="description">Creating software that is <Emphasis>accessible</Emphasis>, <Emphasis>usable</Emphasis>, and <Emphasis>beautiful</Emphasis>.</span>
         </Title>
     </div>
-    
 </div>
+
+
 
 <Section>
     <span id="projects" slot="title">Projects</span>
@@ -112,3 +124,8 @@
 </Section>
 
 <Footer socialLinks={data.socialLinks} />
+
+<!-- {#if scrollY >= 400}
+    <BottomModal />
+{/if} -->
+

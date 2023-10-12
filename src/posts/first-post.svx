@@ -1,0 +1,15 @@
+---
+title: First post
+description: This is the first post !
+date: '2023-10-12'
+lastUpdate: '2023-10-12'
+tags:
+  - First
+  - SvelteKit
+img: Plantopia.png
+published: true
+---
+
+# Hello world
+
+This is amazing

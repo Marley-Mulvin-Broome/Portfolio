@@ -11,7 +11,7 @@
     <title>My Projects</title>
 </svelte:head>
 
-<Backbutton target="/#projects" />
+<!-- <Backbutton target="/#projects" /> -->
 
 <div class="text-center mt-5">
     <SectionTitle>

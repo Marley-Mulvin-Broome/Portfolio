@@ -1,5 +1,5 @@
 <script>
-	import { fade, fly } from "svelte/transition";
+	import { fade } from "svelte/transition";
     import "../app.css";
 
     export let data;
@@ -26,6 +26,7 @@
         <slot />
     </div>
 {/key}
+
 
 
 <style lang="postcss">
