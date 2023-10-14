@@ -6,7 +6,7 @@
     export let data;
 </script>
 
-<div class="w-full flex justify-center justify-self-center">
+<div class="w-full flex justify-center justify-self-center pb-10">
     <!-- Blogs container -->
     <div class="pt-2 lg:pt-24 text-center">
         <SectionTitle>

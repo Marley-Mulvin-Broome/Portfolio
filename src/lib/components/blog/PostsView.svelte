@@ -3,10 +3,12 @@
 	import PostCard from "./PostCard.svelte";
 
     export let posts: Post[] = [];
+
+    export let size: "sm" | "md" = "md";
 </script>
 
 <div class="flex flex-row flex-wrap justify-center gap-10 lg:gap-5">
     {#each posts as post}
-            <PostCard {post}/>
+            <PostCard {size} {post}/>
     {/each}
 </div>

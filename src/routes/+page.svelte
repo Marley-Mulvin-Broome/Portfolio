@@ -13,6 +13,7 @@
     import Footer from "$lib/components/Footer.svelte";
 	import ScrollProgressTracker from "$lib/components/ScrollProgressTracker.svelte";
 	import BottomModal from "$lib/components/BottomModal.svelte";
+	import PostsView from "$lib/components/blog/PostsView.svelte";
 
     export let data: PageData;
 
@@ -92,6 +93,14 @@
         <div class="my-5">
             <LinkButton externalLink={false} href="/projects">See more...</LinkButton>
         </div>
+    </div>
+</Section>
+
+<Section>
+    <a href="/blog" id="blog" slot="title" class="hover:underline">Blog</a>
+    <span slot="subtitle">Click on a post to read</span>
+    <div slot="content" class="mt-10">
+        <PostsView size="sm" posts={data.posts}/>
     </div>
 </Section>
 
