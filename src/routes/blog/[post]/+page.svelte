@@ -1,5 +1,6 @@
 <script lang="ts">
-	import SectionTitle from "$lib/components/SectionTitle.svelte";
+	import Tag from "$lib/components/Tag.svelte";
+import { title } from "$lib/config";
 
     export let data;
 </script>
@@ -13,33 +14,54 @@
     <meta property="og:image" content={`https://marley-web.dev/${data.meta.image}`}/>
 </svelte:head>
 
-<article class="flex flex-col text-left mx-auto w-11/12 lg:w-1/2 pt-10">
+<article class="flex flex-col text-left mx-auto w-11/12 lg:w-1/2 mt-10 py-6 mb-10 px-4 rounded">
     <hgroup>
         <h1 class="lg:text-4xl text-3xl font-bold text-emerald-500">
             {data.meta.title}
         </h1>
 
-        <p class="text-sm text-neutral-300 py-6">
+        <ul class="pt-4 flex flex-row">
+            {#each data.meta.tags as tag}
+                <li>
+                    <Tag>
+                        {tag}
+                    </Tag>
+                </li>
+            {/each}
+        </ul>
+
+        <p class="text-sm text-neutral-300">
             Marley Mulvin Broome, {data.meta.date}
         </p>
+
+        <img src="/{data.meta.img}" alt="{data.meta.title}" class="pt-5 max-w-full">
+
+        
     </hgroup>
 
-    <svelte:component this={data.content} />
+    <div class="prose">
+        <svelte:component this={data.content} />
+    </div>
 </article>
 
 <style>
-    code {
+    /* Code lines */
+    :global(code) {
         counter-reset: step;
         counter-increment: step 0;
     }
 
-    code .line::before {
+    :global(code .line::before) {
         content: counter(step);
         counter-increment: step;
         width: 1rem;
         margin-right: 1.5rem;
         display: inline-block;
         text-align: right;
-        color: rgba(115,138,148,.4);
+        color: rgba(137, 164, 175, 0.4);
+    }
+
+    article {
+        background-color: #272727;
     }
 </style>
