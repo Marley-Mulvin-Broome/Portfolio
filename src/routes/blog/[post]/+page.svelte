@@ -31,7 +31,7 @@ import Tag from "$lib/components/Tag.svelte";
             {data.meta.title}
         </h1>
 
-        <ul class="pt-4 flex flex-row">
+        <ul class="pt-4 flex flex-row flex-wrap">
             {#each data.meta.tags as tag}
                 <li>
                     <Tag>
