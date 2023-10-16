@@ -32,6 +32,10 @@
     @apply text-emerald-400 hover:underline transition-all;
 }
 
+.prose li {
+    @apply text-lg lg:text-xl;
+}
+
 /* First list item */
 .prose ul li {
     list-style: '🔥';

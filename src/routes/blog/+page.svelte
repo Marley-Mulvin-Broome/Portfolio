@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Section from "$lib/components/Section.svelte";
 	import SectionTitle from "$lib/components/SectionTitle.svelte";
 	import PostsView from "$lib/components/blog/PostsView.svelte";
 
@@ -8,7 +7,7 @@
 
 <div class="w-full flex justify-center justify-self-center pb-10">
     <!-- Blogs container -->
-    <div class="pt-2 lg:pt-24 text-center">
+    <div class="pt-2 lg:pt-24 text-center w-full">
         <SectionTitle>
             Blog
             

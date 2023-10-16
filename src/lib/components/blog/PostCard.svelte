@@ -26,7 +26,7 @@
             {post.description}
         </p>
 
-        <div class="flex flex-row mx-4 mb-1">
+        <div class="flex flex-row flex-wrap mx-4 mb-1">
             {#each post.tags as tag}
                 <Tag>
                     {tag}
