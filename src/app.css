@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Use @apply for styling blog posts */
+
+.prose :is(h2, h3, h4, h5, h6) {
+    @apply text-emerald-400 pt-6 pb-1 mb-6 border-b border-neutral-600;
+}
+
+.prose :is(p, a) {
+    @apply text-lg lg:text-xl;
+}
+
+.prose h2 {
+    @apply text-2xl lg:text-4xl;
+}
+
+.prose h3 {
+    @apply text-xl lg:text-3xl;
+}
+
+.prose :not(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
+    @apply mt-20;
+}
+
+.prose p {
+    @apply py-1 pb-2;
+}
+
+.prose a {
+    @apply text-emerald-400 hover:underline transition-all;
+}
+
+/* First list item */
+.prose ul li {
+    list-style: '🔥';
+    @apply py-1;
+}
+
+/* Second list item */
+.prose ul li ul li {
+    list-style: '✨';
+    @apply py-1;
+}
+
+.prose li::marker {
+    @apply text-xl;
+}
+
+.prose ul > li {
+    @apply ml-6;
+}
+
+.prose :not(pre) > code {
+    @apply text-emerald-400 bg-neutral-900 rounded px-1 text-lg;
+}
+
+.prose pre {
+    @apply py-2 rounded max-h-72 overflow-y-scroll my-2;
+}
+
+.prose img {
+    @apply max-w-full rounded py-5;
+}

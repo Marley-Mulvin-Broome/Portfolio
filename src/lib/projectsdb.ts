@@ -39,5 +39,12 @@ export const projects: Project[] = [
         description: "A website for my tutoring business, built with SvelteKit and TypeScript.",
         link: "https://www.marley-tutor.au/",
         source: "https://github.com/Marley-Mulvin-Broome/tutoring-site"
+    },
+    {
+        name: "Omnia",
+        date: new Date("2023-10-09"),
+        description: "A suite of tools to immerse yourself in English, built with React, FastAPI, and Firebase.",
+        link: "https://github.com/Marley-Mulvin-Broome/tech-translator",
+        source: "https://github.com/Marley-Mulvin-Broome/tech-translator",
     }
 ]
