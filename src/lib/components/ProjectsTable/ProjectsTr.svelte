@@ -6,10 +6,10 @@
     const padding = "px-2 py-2 md:px-6 md:py-4";
 </script>
 
-<tr class="text-xl text-left hover:bg-emerald-600">
+<tr class="text-xl text-left hover:bg-emerald-600 group">
     <th scope="row" class="{padding}">
         {#if project.link}
-            <a class="underline text-emerald-500" target="_blank" rel="noopener noreferrer" href={project.link}>{project.name}</a>
+            <a class="underline text-emerald-500 group-hover:text-white" target="_blank" rel="noopener noreferrer" href={project.link}>{project.name}</a>
         {:else}
             <p class="inline-block">
                 {project.name}

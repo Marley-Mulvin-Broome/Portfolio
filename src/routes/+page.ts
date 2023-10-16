@@ -11,7 +11,6 @@ export const load = (async ({fetch}) => {
     return {
         skills,
         timelineEvents,
-        socialLinks,
         posts: postsJson.slice(0, 3)
     };
 }) satisfies PageLoad;

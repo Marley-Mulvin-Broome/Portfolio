@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Backbutton from "$lib/components/Backbutton.svelte";
 	import ProjectsTable from "$lib/components/ProjectsTable/ProjectsTable.svelte";
 	import SectionTitle from "$lib/components/SectionTitle.svelte";
 	import type { PageData } from "./$types";
@@ -8,7 +7,15 @@
 </script>
 
 <svelte:head>
-    <title>My Projects</title>
+    <title>Marley's Projects</title>
+
+    <meta name="description" content="Marley Mulvin Broome's list of projects in software engineering.">
+    <meta name="keywords" content="marley, mulvin, broome, web, web developer, programmer, hire web, hire developer, website creation, app, dev, github, projects, project, portfolio">
+    <meta name="author" content="Marley Mulvin Broome, marley.developer@gmail.com">
+    <meta name="language" content="en">
+    <meta name="robots" content="index,follow">
+    <meta name="revised" content="Sunday, October 16th, 2023, 17:20 pm">
+    <meta charset="utf-8">
 </svelte:head>
 
 <!-- <Backbutton target="/#projects" /> -->

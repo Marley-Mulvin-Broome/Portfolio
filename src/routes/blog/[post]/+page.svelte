@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Tag from "$lib/components/Tag.svelte";
-import { title } from "$lib/config";
+	import ScrollProgressTracker from "$lib/components/ScrollProgressTracker.svelte";
+import Tag from "$lib/components/Tag.svelte";
 
     export let data;
 </script>
@@ -12,7 +12,18 @@ import { title } from "$lib/config";
     <meta property="og:description" content={data.meta.description}/>
     <meta property="og:url" content={`https://marley-web.dev/blog/${data.meta.slug}`}/>
     <meta property="og:image" content={`https://marley-web.dev/${data.meta.image}`}/>
+    <meta property="og:site_name" content="Marley Mulvin Broome"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:published_time" content={data.meta.date}/>
+    <meta property="og:modified_time" content={data.meta.lastUpdate}/>
+    <meta property="og:author" content="Marley Mulvin Broome"/>
+    <meta property="og:section" content="Blog"/>
+    {#each data.meta.tags as tag}
+        <meta property="og:tag" content={tag}/>
+    {/each}
 </svelte:head>
+
+<ScrollProgressTracker />
 
 <article class="flex flex-col text-left mx-auto w-11/12 lg:w-1/2 mt-10 py-6 mb-10 px-4 rounded">
     <hgroup>

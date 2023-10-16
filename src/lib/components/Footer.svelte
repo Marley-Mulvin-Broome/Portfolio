@@ -8,7 +8,7 @@
     }
 </script>
 
-<footer class="w-full text-center">
+<footer class="w-full text-center py-6">
     <ul class="flex flex-row justify-center align-middle p-2">
         {#each socialLinks as socialLink}
             <li class="inline-block min-w-fit p-2 hover:opacity-80">
@@ -19,5 +19,5 @@
         {/each}
     </ul>
     <p>Marley Mulvin Broome &copy; 2023</p>
-    <button class="text-emerald-500 underline" on:click={backToTop}>Back to top</button>
+    <button class="text-emerald-400 text-lg" on:click={backToTop}>↑Back to top↑</button>
 </footer>
