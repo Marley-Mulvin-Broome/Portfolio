@@ -15,5 +15,10 @@ export const socialLinks: ISocialLink[] = [
         name: "Email",
         link: "mailto:marley.developer@gmail.com",
         icon: "/socials/email.svg"
+    },
+    {
+        name: "X (Twitter)",
+        link: "https://twitter.com/marley_eng",
+        icon: "/socials/twitter.png"
     }
 ];
