@@ -15,7 +15,7 @@ published: true
 
 ## The Context
 
-In the middle of a hackathon, writing endless lines of serverside code to accomodate our English learning app, I had decided to write tests to
+In the middle of a hackathon, writing endless lines of serverside code to accommodate our English learning app, I had decided to write tests to
 make sure our backend is reliable. Using FastAPI, I had written a few tests to make sure our endpoints were working as expected. However, I didn't want to absolutely
 wreck our free tier Firestore and authentication, so I needed a better solution for testing. This was where [Firebase Emulator Suite](https://firebase.google.com/docs/emulator-suite) came in.
 Looking online, I couldn't find a reliable guide on how to implement it with CI, so I thought I'd share how I did it.  (Seriously, I googled 'how to setup Firebase Emulator FastAPI testing 1 million times!!!)
