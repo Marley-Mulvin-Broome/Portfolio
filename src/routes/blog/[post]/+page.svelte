@@ -7,6 +7,16 @@ import Tag from "$lib/components/Tag.svelte";
 
 <svelte:head>
     <title>{data.meta.title}</title>
+    <meta name="description" content={data.meta.description}/>
+    <meta name="keywords" content={data.meta.tags.join(", ")}/>
+    <meta name="author" content="Marley Mulvin Broome"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="language" content="English"/>
+    <meta name="revisit-after" content="7 days"/>
+    <meta name="theme-color" content="#1a202c"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@marley_eng"/>
+    <meta name="twitter:creator" content="@marley_eng"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content={data.meta.title}/>
     <meta property="og:description" content={data.meta.description}/>
